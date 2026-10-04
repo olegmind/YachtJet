@@ -1,0 +1,1069 @@
+body {
+	min-height: 100vh;
+	margin: 0;
+	background-color: #0E1823;
+	color: #fff;
+	font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+}
+
+body.menu-open {
+	overflow: hidden;
+}
+
+.hero {
+	min-height: clamp(680px, 55.56vw, 800px);
+	padding-top: 32px;
+	background-image: url("./images/image/image%201.svg");
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.site-header {
+	width: min(1240px, calc(100% - 48px));
+	height: 48px;
+	margin: 0 auto;
+	padding: 0 20px;
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	align-items: center;
+	border-radius: 6px;
+	background: #fff;
+	color: #102128;
+}
+
+.brand {
+	color: inherit;
+	font-size: 14px;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.header-bar {
+	display: contents;
+}
+
+.menu-toggle {
+	display: none;
+}
+
+.main-nav {
+	display: flex;
+	gap: 6px;
+}
+
+.mobile-menu-nav {
+	display: none;
+}
+
+.main-nav a {
+	padding: 9px 15px;
+	border-radius: 4px;
+	color: #738087;
+	font-family: Inter, "Trebuchet MS", Arial, sans-serif;
+	font-size: 9px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 130%;
+	letter-spacing: 0;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+	background: #1b414b;
+	color: #fff;
+}
+
+.social-links {
+	justify-self: end;
+	display: flex;
+	gap: 8px;
+}
+
+.social-links a,
+.social-links img {
+	width: 24px;
+	height: 24px;
+	display: block;
+}
+
+.social-links a,
+.footer-socials a {
+	border-radius: 50%;
+	transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.social-links a:hover,
+.footer-socials a:hover,
+.social-links a:focus-visible,
+.footer-socials a:focus-visible {
+	opacity: 0.75;
+	transform: scale(1.12);
+}
+
+.social-links a:focus-visible,
+.footer-socials a:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.social-links a,
+	.footer-socials a {
+		transition: none;
+	}
+}
+
+.hero-content {
+	width: min(920px, calc(100% - 40px));
+	margin: clamp(100px, 9.72vw, 140px) auto 0;
+	text-align: center;
+}
+
+.hero-content h1 {
+	margin: 0;
+	font-size: clamp(40px, 3.75vw, 54px);
+	font-weight: 500;
+	line-height: 1.05;
+}
+
+.hero-content p {
+	max-width: 500px;
+	margin: 24px auto 0;
+	color: rgba(255, 255, 255, 0.65);
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.button {
+	width: 179px;
+	height: 52px;
+	margin: 38px auto 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 16px 40px;
+	border: 0;
+	border-radius: 15px;
+	background: #1b414b;
+	color: #fff;
+	font: inherit;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.button:hover {
+	background: #2b5964;
+}
+
+.button:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 4px;
+}
+
+.about {
+	width: min(1340px, calc(100% - clamp(32px, 6.95vw, 100px)));
+	height: auto;
+	margin: -35px auto 80px;
+	overflow: hidden;
+	border-radius: 24px;
+	background: #fff;
+	color: #1b414b;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.about-intro {
+	min-height: clamp(280px, 23.4vw, 337px);
+	padding: clamp(32px, 3.47vw, 50px);
+	display: grid;
+	grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+	gap: clamp(24px, 5.56vw, 80px);
+	align-items: start;
+}
+
+.about-intro h2 {
+	margin: 0;
+	font-size: clamp(36px, 3.35vw, 48px);
+	font-weight: 500;
+	line-height: 1.08;
+}
+
+.about-copy {
+	max-width: 440px;
+}
+
+.about-lead {
+	margin: 0;
+	font-size: clamp(18px, 1.6vw, 23px);
+	line-height: 1.05;
+}
+
+.about-detail {
+	margin: clamp(16px, 1.67vw, 24px) 0 0;
+	color: #8d969a;
+	font-size: clamp(13px, 0.98vw, 14px);
+	line-height: 1.25;
+}
+
+.about-image {
+	width: 100%;
+	height: auto;
+	flex: 0 0 auto;
+	display: block;
+	border-top-right-radius: 24px;
+}
+
+.yachts-heading {
+	padding: clamp(48px, 4.86vw, 70px) clamp(20px, 2.23vw, 32px);
+	background: #0e1823;
+	color: #fbfbfb;
+}
+
+.yachts-heading h2 {
+	width: min(714px, 100%);
+	margin: 0 auto;
+	font-family: Inter, "Trebuchet MS", Arial, sans-serif;
+	font-size: clamp(32px, 3.34vw, 48px);
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: -0.02em;
+	text-align: center;
+}
+
+.yacht-grid {
+	width: min(1240px, 100%);
+	margin: clamp(20px, 1.67vw, 24px) auto 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
+	gap: clamp(16px, 2.23vw, 32px);
+}
+
+.yacht-card {
+	width: 100%;
+	min-height: clamp(450px, 35.3vw, 508px);
+	min-width: 0;
+	padding: 16px;
+	border-radius: 24px;
+	background: #fbfbfb;
+	color: #1b414b;
+}
+
+.yacht-card-image {
+	width: 100%;
+	aspect-ratio: 360 / 268;
+	display: block;
+	overflow: hidden;
+	border-radius: 24px;
+	object-fit: cover;
+}
+
+.yacht-card-title {
+	margin-top: clamp(16px, 1.67vw, 24px);
+	padding-bottom: clamp(8px, 0.84vw, 12px);
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 12px;
+	border-bottom: 1px solid #e6e8e9;
+	text-transform: uppercase;
+}
+
+.yacht-card-title h3 {
+	min-width: 0;
+	margin: 0;
+	overflow: hidden;
+	font-size: 14px;
+	font-weight: 500;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.yacht-card-title span {
+	flex: 0 0 auto;
+	color: #a3aaad;
+	font-size: 10px;
+}
+
+.yacht-specs {
+	margin: 12px 0 0;
+}
+
+.yacht-specs div {
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
+	font-size: 12px;
+	line-height: 1.7;
+}
+
+.yacht-specs dt {
+	color: #a3aaad;
+	text-transform: uppercase;
+}
+
+.yacht-specs dd {
+	margin: 0;
+	color: #18232a;
+	text-align: right;
+}
+
+.yachts-button {
+	width: 179px;
+	height: 52px;
+	margin: 50px auto 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 16px 40px;
+	border: 1px solid #fbfbfb59;
+	border-radius: 15px;
+	background: transparent;
+	color: #fbfbfb;
+	font: inherit;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.yachts-button:hover {
+	background: #fbfbfb12;
+}
+
+.yachts-button:focus-visible {
+	outline: 2px solid #fbfbfb;
+	outline-offset: 4px;
+}
+
+.activities {
+	width: min(1340px, calc(100% - clamp(32px, 6.95vw, 100px)));
+	min-height: clamp(360px, 29.45vw, 424px);
+	margin: clamp(80px, 10.42vw, 150px) auto clamp(48px, 5.56vw, 80px);
+	display: grid;
+	grid-template-columns: minmax(0, 768fr) minmax(0, 540fr);
+	gap: clamp(20px, 2.23vw, 32px);
+}
+
+.activities-panel {
+	min-width: 0;
+	padding: clamp(32px, 3.89vw, 56px) clamp(20px, 2.23vw, 32px);
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-rows: repeat(2, minmax(0, 1fr));
+	column-gap: clamp(20px, 2.23vw, 32px);
+	background: #1b414b;
+	border-radius: 24px;
+}
+
+.activity {
+	min-width: 0;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #fbfbfb24;
+}
+
+.activity:nth-child(n + 3) {
+	padding-top: 24px;
+	border-bottom: 0;
+}
+
+.activity h2 {
+	margin: 0 0 20px;
+	color: #fbfbfb;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 1;
+}
+
+.activity p {
+	margin: 0;
+	color: #fbfbfbb3;
+	font-size: 14px;
+	line-height: 1.25;
+}
+
+.activities-image {
+	width: 100%;
+	height: 100%;
+	min-height: clamp(360px, 29.45vw, 424px);
+	display: block;
+	border-radius: 24px;
+	object-fit: cover;
+}
+
+.booking {
+	width: min(1340px, calc(100% - clamp(32px, 6.95vw, 100px)));
+	margin: clamp(64px, 6.95vw, 100px) auto clamp(48px, 5.56vw, 80px);
+	display: grid;
+	grid-template-columns: minmax(0, 768fr) minmax(0, 540fr);
+	gap: clamp(20px, 2.23vw, 32px);
+	align-items: start;
+}
+
+.booking-image {
+	width: 100%;
+
+	display: block;
+	border-radius: 24px;
+}
+
+.booking-form {
+	padding-left: clamp(0px, 1.25vw, 18px);
+	display: grid;
+	gap: 16px;
+}
+
+.booking-form h2 {
+	width: min(381px, 100%);
+	margin: 0;
+	color: #fbfbfb;
+	font-family: Inter, "Trebuchet MS", Arial, sans-serif;
+	font-size: clamp(36px, 3.34vw, 48px);
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: -0.02em;
+	white-space: nowrap;
+}
+
+.booking-form input,
+.booking-form textarea {
+	width: 100%;
+	min-height: 56px;
+	padding: 16px;
+	border: 1px solid #fbfbfb24;
+	border-radius: 12px;
+	background: transparent;
+	color: #fbfbfb;
+	font: inherit;
+	font-size: 14px;
+}
+
+.booking-form textarea {
+	min-height: 120px;
+	resize: vertical;
+}
+
+.booking-form input::placeholder,
+.booking-form textarea::placeholder {
+	color: #fbfbfb59;
+}
+
+.booking-form input:focus-visible,
+.booking-form textarea:focus-visible {
+	outline: 2px solid #fbfbfb80;
+	outline-offset: 2px;
+}
+
+.booking-submit {
+	width: 194px;
+	height: 56px;
+	margin: 16px 0 0;
+	padding: 18px 75px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 0;
+	border-radius: 15px;
+	background: #1b414b;
+	color: #fbfbfb;
+	font: inherit;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.booking-submit:hover {
+	background: #2b5964;
+}
+
+.booking-submit:focus-visible {
+	outline: 2px solid #fbfbfb;
+	outline-offset: 4px;
+}
+
+.testimonials-intro {
+	padding: clamp(24px, 1.67vw, 24px) clamp(16px, 1.67vw, 24px) clamp(64px, 8.34vw, 120px);
+	border-top: 1px solid #fbfbfb24;
+	text-align: center;
+}
+
+.testimonials-title {
+	width: min(1200px, 100%);
+	margin: 0 auto;
+	color: #fbfbfb;
+	font-family: Inter, "Trebuchet MS", Arial, sans-serif;
+	font-size: clamp(34px, 4vw, 76px);
+	font-weight: 500;
+	line-height: 0.95;
+	letter-spacing: -0.04em;
+	text-align: center;
+}
+
+.testimonials-copy {
+	width: min(620px, 100%);
+	margin: 22px auto 0;
+	color: #fbfbfb;
+	opacity: 0.4;
+	font-family: Inter, "Trebuchet MS", Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18px;
+	letter-spacing: -0.02em;
+	text-align: center;
+}
+
+.testimonials-grid {
+	width: min(1240px, 100%);
+	margin: clamp(32px, 3.89vw, 56px) auto 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
+	gap: clamp(16px, 2.23vw, 32px);
+}
+
+.testimonial-card {
+	min-height: 282px;
+	padding: clamp(22px, 2.23vw, 32px) clamp(20px, 2.5vw, 36px);
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	border-radius: 24px;
+	background: #fbfbfb;
+	color: #102128;
+	text-align: center;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-avatar {
+	width: 56px;
+	height: 56px;
+	display: block;
+	margin: 0 auto;
+	border-radius: 50%;
+	object-fit: cover;
+	background: #e7e7e7;
+}
+
+.testimonial-card h3 {
+	margin: 0;
+	color: #18232a;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.2;
+	text-align: center;
+}
+
+.testimonial-card p {
+	margin: 0;
+	color: rgba(24, 35, 42, 0.8);
+	font-size: 12px;
+	line-height: 1.2;
+	letter-spacing: -0.01em;
+	text-align: center;
+}
+
+.site-footer {
+	width: min(1390px, calc(100% - 50px));
+	min-height: clamp(360px, 29.03vw, 418px);
+	margin: 0 auto;
+	padding: clamp(24px, 2.23vw, 32px) clamp(24px, 3.47vw, 50px) 18px;
+	position: relative;
+	border-radius: 24px 24px 0 0;
+	background: #1b414b;
+	color: #fbfbfb;
+}
+
+.footer-top {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	align-items: center;
+}
+
+.footer-brand {
+	width: fit-content;
+	color: inherit;
+	font-size: 14px;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.footer-nav {
+	display: flex;
+	gap: 6px;
+}
+
+.footer-nav a {
+	min-width: 60px;
+	padding: 9px 14px;
+	border-radius: 8px;
+	background: rgba(251, 251, 251, 0.3);
+	color: #fbfbfb;
+	font-size: 9px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus-visible {
+	background: rgba(251, 251, 251, 0.45);
+}
+
+.footer-socials {
+	position: absolute;
+	top: 18px;
+	right: 50px;
+	display: flex;
+	gap: 8px;
+}
+
+.footer-socials a,
+.footer-socials img {
+	width: 24px;
+	height: 24px;
+	display: block;
+}
+
+.footer-socials img {
+	filter: brightness(0) invert(1);
+}
+
+.footer-message {
+	margin: clamp(44px, 4.31vw, 62px) auto 0;
+	color: #fbfbfb;
+	font-family: Inter, "Trebuchet MS", Arial, sans-serif;
+	font-size: clamp(24px, 2.23vw, 32px);
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: -0.02em;
+	text-align: center;
+}
+
+.footer-legal {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	width: 298px;
+	height: 17px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 32px;
+	color: rgba(251, 251, 251, 0.35);
+	transform: translateX(-50%);
+}
+
+.footer-legal span,
+.footer-legal a {
+	font-family: Inter, "Trebuchet MS", Arial, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 118%;
+	letter-spacing: 0.03em;
+	text-align: center;
+}
+
+.footer-legal a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.footer-legal a:hover,
+.footer-legal a:focus-visible {
+	color: #fbfbfb;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	clip-path: inset(50%);
+}
+
+@media (min-width: 1200px) {
+	.yacht-grid,
+	.testimonials-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+	.about-intro {
+		gap: clamp(24px, 4vw, 48px);
+	}
+
+	.yacht-grid,
+	.testimonials-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.activities {
+		grid-template-columns: 1fr;
+	}
+
+	.activities-panel {
+		min-height: 360px;
+	}
+
+	.activities-image {
+		height: clamp(300px, 42vw, 424px);
+		min-height: 0;
+	}
+
+	.booking {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.booking-form h2 {
+		white-space: normal;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+	.booking {
+		grid-template-columns: 1fr;
+	}
+
+	.booking-form {
+		padding-left: 0;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.hero {
+		min-height: max(100svh, 680px);
+		padding-top: 20px;
+		background-size: auto 800px;
+	}
+
+	.site-header {
+		width: calc(100% - 32px);
+		padding: 0 14px;
+		grid-template-columns: 1fr auto;
+	}
+
+	.header-bar {
+		grid-column: 1;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.menu-toggle {
+		width: 24px;
+		height: 24px;
+		padding: 4px 2px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 5px;
+		border: 0;
+		background: transparent;
+		color: #1b414b;
+		cursor: pointer;
+	}
+
+	.menu-toggle span {
+		width: 20px;
+		height: 2px;
+		border-radius: 2px;
+		background: currentColor;
+		transition: transform 160ms ease;
+	}
+
+	.main-nav {
+		display: none;
+	}
+
+	.social-links {
+		display: none;
+	}
+
+	.site-header.is-open {
+		position: fixed;
+		z-index: 1000;
+		inset: 0;
+		width: 100%;
+		height: 100vh;
+		height: 100dvh;
+		margin: 0;
+		padding: 12px;
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		border-radius: 0;
+		background: #0e1823;
+		color: #fbfbfb;
+	}
+
+	.site-header.is-open .header-bar {
+		min-height: 42px;
+		flex: 0 0 42px;
+		padding: 0 14px;
+		border-radius: 4px;
+		background: #fff;
+		color: #102128;
+	}
+
+	.site-header.is-open .menu-toggle {
+		position: relative;
+		color: #1b414b;
+	}
+
+	.site-header.is-open .menu-toggle span:first-child {
+		transform: translateY(3.5px) rotate(45deg);
+	}
+
+	.site-header.is-open .menu-toggle span:last-child {
+		transform: translateY(-3.5px) rotate(-45deg);
+	}
+
+	.site-header.is-open .mobile-menu-nav {
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		gap: 4px;
+	}
+
+	.site-header.is-open .mobile-menu-nav a {
+		min-width: 64px;
+		padding: 10px 14px;
+		border-radius: 6px;
+		background: #1b414b;
+		color: #fbfbfb;
+		font-size: 9px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.site-header.is-open .mobile-menu-nav a:hover,
+	.site-header.is-open .mobile-menu-nav a:focus-visible {
+		background: #2b5964;
+	}
+
+	.site-header.is-open .social-links {
+		position: static;
+		margin: 0 auto 16px;
+		display: flex;
+		gap: 8px;
+	}
+
+	.site-header.is-open .social-links img {
+		filter: brightness(0) invert(1);
+	}
+
+	.hero-content {
+		margin-top: clamp(88px, 30vw, 140px);
+	}
+
+	.hero-content h1 {
+		font-size: clamp(34px, 9vw, 48px);
+	}
+
+	.hero-content h1 br {
+		display: none;
+	}
+
+	.hero-content p {
+		font-size: 13px;
+	}
+
+	.about {
+		width: calc(100% - 32px);
+		margin-top: -32px;
+		border-radius: 16px;
+	}
+
+	.about-intro {
+		height: auto;
+		min-height: 0;
+		flex: 0 0 auto;
+		padding: 28px 24px 32px;
+		grid-template-columns: 1fr;
+		gap: 24px;
+	}
+
+	.about-intro h2 {
+		font-size: clamp(32px, 8vw, 42px);
+	}
+
+	.about-intro h2 br {
+		display: none;
+	}
+
+	.about-lead {
+		font-size: 20px;
+	}
+
+	.about-detail {
+		margin-top: 16px;
+		font-size: 13px;
+	}
+
+	.about-image {
+		border-top-right-radius: 16px;
+	}
+
+	.yachts-heading {
+		padding: 48px 24px;
+	}
+
+	.yachts-heading h2 {
+		min-height: 0;
+		font-size: clamp(32px, 8vw, 42px);
+		line-height: 1;
+	}
+
+	.yacht-grid {
+		height: auto;
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.yacht-card {
+		width: min(392px, 100%);
+		height: auto;
+		min-height: 0;
+		margin: 0 auto;
+	}
+
+	.activities {
+		width: calc(100% - 32px);
+		height: auto;
+		margin: 80px auto 48px;
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.activities-panel {
+		min-height: 424px;
+		padding: 32px 24px;
+		column-gap: 20px;
+		border-radius: 16px;
+	}
+
+	.activity h2 {
+		margin-bottom: 14px;
+	}
+
+	.activity p {
+		font-size: 12px;
+	}
+
+	.activities-image {
+		height: auto;
+		min-height: 0;
+		aspect-ratio: 540 / 424;
+		border-radius: 16px;
+	}
+
+	.booking {
+		width: calc(100% - 32px);
+		margin: 64px auto 48px;
+		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+
+	.booking-image {
+		border-radius: 16px;
+	}
+
+	.booking-form h2 {
+		width: 100%;
+		height: auto;
+		font-size: clamp(36px, 9vw, 48px);
+		line-height: 1;
+		white-space: normal;
+	}
+
+	.booking-submit {
+		margin: 8px auto 0;
+	}
+
+	.testimonials-intro {
+		padding: 20px 16px;
+	}
+
+	.testimonials-title {
+		height: auto;
+		font-size: clamp(30px, 6vw, 36px);
+		line-height: 0.96;
+	}
+
+	.testimonials-copy {
+		height: auto;
+		font-size: 14px;
+	}
+
+	.testimonials-grid {
+		height: auto;
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.testimonial-card {
+		height: auto;
+		padding: 26px 22px 20px;
+	}
+
+	.testimonial-avatar {
+		width: 72px;
+		height: 72px;
+	}
+
+	.site-footer {
+		width: calc(100% - 32px);
+		height: auto;
+		min-height: 300px;
+		padding: 24px 20px 56px;
+		border-radius: 24px 24px 0 0;
+	}
+
+	.footer-top {
+		grid-template-columns: 1fr auto;
+		row-gap: 20px;
+	}
+
+	.footer-nav {
+		grid-row: 2;
+		grid-column: 1 / -1;
+		justify-content: center;
+	}
+
+	.footer-socials {
+		position: static;
+		grid-row: 1;
+		grid-column: 2;
+	}
+
+	.footer-message {
+		margin-top: 44px;
+		font-size: clamp(17px, 5vw, 21px);
+		line-height: 1.1;
+	}
+
+	.footer-message br {
+		display: none;
+	}
+
+	.footer-legal {
+		gap: 16px;
+	}
+}
