@@ -1003,13 +1003,21 @@ body.menu-open {
 
 	.testimonials-title {
 		height: auto;
-		font-size: clamp(30px, 6vw, 36px);
+		width: min(240px, 100%);
+		font-size: clamp(20px, 5.2vw, 24px);
 		line-height: 0.96;
+	}
+
+	.testimonials-title br {
+		display: none;
 	}
 
 	.testimonials-copy {
 		height: auto;
-		font-size: 14px;
+		max-width: 230px;
+		margin-top: 16px;
+		font-size: clamp(8px, 2.1vw, 10px);
+		line-height: 1.2;
 	}
 
 	.testimonials-grid {
